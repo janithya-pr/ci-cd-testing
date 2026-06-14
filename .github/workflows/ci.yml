@@ -9,14 +9,14 @@ on:
       - main
       - develop
 
-  # workflow_dispatch:
+  workflow_dispatch:
 
 jobs:
   test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
+      - name: Checkout Repository
         uses: actions/checkout@v5
 
       - name: Stage 01
