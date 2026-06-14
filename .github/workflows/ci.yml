@@ -1,0 +1,35 @@
+# ci.yml
+name: CI
+
+on:
+  pull_request:
+
+  push:
+    branches:
+      - main
+      - develop
+
+  # workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v5
+
+      - name: Stage 01
+        run: |
+          echo "Stage 01"
+          echo "smple stage for CI testing."
+
+      - name: Stage 02
+        run: |
+          echo "Stage 02"
+          echo "smple stage for CI testing."
+
+      - name: Stage 03
+        run: |
+          echo "Stage 03"
+          echo "smple stage for CI testing."
